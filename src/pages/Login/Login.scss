@@ -1,0 +1,47 @@
+// src/styles/login.scss
+
+$background-image: url('../../assets/images/restaurant-background.jpg');
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden; /* Prevent vertical scroll */
+  }
+  
+  .background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Move background behind content */
+    background: $background-image center/cover;
+  }
+  
+  .login-container {
+    display: flex;
+    height: 100%;
+    justify-content: flex-start;
+  }
+  
+  .card-container {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.927);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .login-container {
+      align-items: center;
+    }
+  
+    .card-container {
+      width: 90%;
+    }
+  }
