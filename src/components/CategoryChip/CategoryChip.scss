@@ -1,0 +1,33 @@
+.category-chip{
+    height: 50px;
+    width: 140px;
+    border-radius: 25px 25px 25px 25px;
+    background-color: #80849E;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding : 14px;
+    
+    img{
+        height: 35px;
+        width: 35px;
+    }
+    .title{
+        span{
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+    }
+
+    &.active{
+        background-color: #F9C300;
+        .title{
+            span{
+                color: #000;
+                font-size: 1rem;
+                font-weight: 600;
+            }
+        }
+    }
+}
