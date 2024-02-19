@@ -9,6 +9,7 @@
   padding: 0;
   height: 100vh;
   width: 100vw;
+  font-family: "Poppins", sans-serif;
 }
 
 
@@ -16,7 +17,8 @@
   height: 100%;
   width: 100%;
   display: flex;
-  background-color: #1E224F;
+  background-color: #090B2B;
+  overflow-x: hidden !important;
 
   .sidebar {
     flex: 1;
@@ -44,5 +46,6 @@
 
   .rightSidebar{
     flex: 4;
+    background-color: #6876F0;
   }
 }
