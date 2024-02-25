@@ -1,0 +1,29 @@
+.sidebarContainer {
+  background: linear-gradient(to right, #6684e6, #86a9ef);
+  height: 100%;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  .logoContainer {
+    flex: 1;
+  }
+
+  .Links {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .icons {
+      padding: 20%;
+      display: grid;
+
+      &.active {
+        background-color: #090b2b;
+        border-radius: 37px 0px 0px 37px;
+        color: #f9c300;
+      }
+    }
+   
+  }
+}

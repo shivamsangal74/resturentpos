@@ -7,9 +7,7 @@ import coffee from "../../assets/images/coffee.png";
 import pizza from "../../assets/images/pizza.png";
 import { HorizontalLine } from "../HorizontalLine/HorizontalLine";
 import { ButtonLabel } from "../Button/Button";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Box from "@mui/material/Box";
+
 
 export const RightSideBar = () => {
   const handleSaveClick = () => {
@@ -51,9 +49,7 @@ export const RightSideBar = () => {
       Mrp: 50,
     },
   ];
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+
 
   return (
     <>
@@ -71,29 +67,6 @@ export const RightSideBar = () => {
         </div>
       </div>
       <div>
-        <Box sx={{ maxWidth: { xs: 320, sm: 480 }, bgcolor: "#80849E" }}>
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            variant="scrollable"
-            scrollButtons={false}
-            TabIndicatorProps={{ style: { backgroundColor: "black" } }}
-            centered
-          >
-            <Tab
-              label="Tables"
-              style={{ color: value === 0 ? "black" : "white" }}
-            />
-            <Tab
-              label="Home Delivery"
-              style={{ color: value === 1 ? "black" : "white" }}
-            />
-            <Tab
-              label="Take Away"
-              style={{ color: value === 2 ? "black" : "white" }}
-            />
-          </Tabs>
-        </Box>
         {SummaryList &&
           SummaryList.map((list) => {
             return (
