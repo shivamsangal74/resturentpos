@@ -42,10 +42,8 @@
     }
 
   }
-
-
   .rightSidebar{
     flex: 4;
-    background-color: #6876F0;
+    padding: 20px;
   }
 }

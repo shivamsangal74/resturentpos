@@ -1,0 +1,67 @@
+.rightSideBarContainer{
+    display: flex;
+    justify-content: space-between;
+    .name{
+        color: #ffff;
+        .subName {
+                font-size: 0.7rem;
+                span {
+                    opacity: 0.7;
+                }
+        }
+    }
+    .icons {
+        color: #fff;
+        display: flex;
+        cursor: pointer;
+        gap: 12px;
+        margin-left: 20px;
+    }
+    .deteleIcon{
+        color: red;
+    }
+
+}
+.summaryContainer{
+    position: absolute;
+    bottom: 5px; 
+    color: #ffff;
+    height: 180px;
+    width: 270px;
+    background-color: rgb(113, 113, 233);
+    border-radius: 20px;
+    padding-top: 10px;
+    .summaryLabel{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 5px;
+    }
+    
+    
+}
+.labelContainer{
+    color: #ffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px 0px 20px;
+}
+
+.tabContainer{
+    height: 50px;
+    width: 290px;
+    border-radius: 25px 25px 25px 25px;
+    background-color: #80849E;
+    display: flex;
+    justify-content: space-evenly;
+    padding : 10px;
+    margin-top: 5px;
+    .title{
+        color: #ffff;
+    }
+    img{
+        height: 35px;
+        width: 35px;
+        border-radius: 10%;
+    }
+    
+}
