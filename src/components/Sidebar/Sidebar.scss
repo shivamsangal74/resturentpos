@@ -15,13 +15,15 @@
     flex-direction: column;
     gap: 20px;
     .icons {
-      padding: 20%;
+      justify-content: space-evenly;
       display: grid;
+      padding-right: 20%;
 
       &.active {
         background-color: #090b2b;
         border-radius: 37px 0px 0px 37px;
         color: #f9c300;
+        padding: 20%;
       }
     }
    
