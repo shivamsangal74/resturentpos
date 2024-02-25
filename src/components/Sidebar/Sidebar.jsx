@@ -22,7 +22,7 @@ export const Sidebar = () => {
          <ContainerOutlined /> <span>Bills</span>
        </div>
        <div className="icons">
-         <FileOutlined /> <span>Reports</span>
+         <FileOutlined /> <span>Report</span>
        </div>
       </div>
     </div>
