@@ -1,0 +1,22 @@
+.input {
+    width: 100%;
+    height: 30px;
+    padding-left: 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 2px;
+    background: linear-gradient(to right, #eeeff1, #cad8f4);
+  }
+  .input-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #888;
+  }
+  
