@@ -2,7 +2,7 @@
 import React from "react";
 import { Form, Input, Button, Card, Typography } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
-
+import logo from '../../assets/images/logo.png'
 import "./Login.scss";
 
 const { Title } = Typography;
@@ -19,6 +19,9 @@ export const Login = () => {
       <div className="background-container" />
       <div className="login-container">
         <Card className="card-container">
+          <div>
+            <img src={logo} style={{height:"200px",width:"200px"}} /> 
+          </div>
           <Title level={3} className="form-title">
             Login
           </Title>
@@ -60,9 +63,9 @@ export const Login = () => {
                 type="primary"
                 htmlType="submit"
                 shape="round"
-                style={{ width: "100%", marginTop: 8 }}
+                style={{ width: "100%", marginTop: 8, background:"#f67c11" }}
               >
-                Log in
+                Running Order
               </Button>
             </Form.Item>
           </Form>
