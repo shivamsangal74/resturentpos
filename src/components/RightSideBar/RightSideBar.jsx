@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import "./RightSideBar.scss";
 import { SummaryCard } from "../SummaryCard/SummarCard";
-import { DeleteFilled, PrinterFilled, DownOutlined } from "@ant-design/icons";
+import {
+  DeleteFilled,
+  PrinterFilled,
+  UserOutlined,
+} from "@ant-design/icons";
 import burger from "../../assets/images/burger.png";
 import coffee from "../../assets/images/coffee.png";
 import pizza from "../../assets/images/pizza.png";
 import { HorizontalLine } from "../HorizontalLine/HorizontalLine";
 import { ButtonLabel } from "../Button/Button";
-
+import { Input } from "../Input/Input";
 
 export const RightSideBar = () => {
   const handleSaveClick = () => {
@@ -18,7 +22,7 @@ export const RightSideBar = () => {
   };
   const handleOrderClick = () => {};
   const [loading, setLoading] = useState(false);
-  const [value, setValue] = useState(0);
+  const [isUserPopupOpen, setIsUserPopupOpen] = useState(false);
   const SummaryList = [
     {
       id: 1,
@@ -49,8 +53,31 @@ export const RightSideBar = () => {
       Mrp: 50,
     },
   ];
+  const handleOpenUserPopup = () => {
+    if(isUserPopupOpen){
+      setIsUserPopupOpen(false);
+    }else{
+      setIsUserPopupOpen(true);
+    }
 
+  };
 
+  const handleCloseUserPopup = () => {
+    setIsUserPopupOpen(false);
+  };
+  const [customer, setCustomer] = useState({
+    name: "",
+    mobile: "",
+    address: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setCustomer((prevCustomer) => ({
+      ...prevCustomer,
+      [name]: value,
+    }));
+  };
   return (
     <>
       |
@@ -58,15 +85,71 @@ export const RightSideBar = () => {
         <div className="name">
           <div>Bill No #4555</div>
           <div className="subName">
-            <span>Customer Name</span>
+            <span onClick={handleOpenUserPopup}>Add Customer Details</span>
           </div>
         </div>
         <div className="icons">
+          <UserOutlined onClick={handleOpenUserPopup} />
           <PrinterFilled />
           <DeleteFilled className="deteleIcon" />
         </div>
       </div>
       <div>
+        {isUserPopupOpen && (
+          <div className="customerPopupContainer">
+            <Input
+              type="number"
+              value={customer.mobile}
+              onChange={handleChange}
+              name="mobile"
+              placeholder="Enter customer mobile no"
+            />
+            <Input
+              type="text"
+              value={customer.name}
+              onChange={handleChange}
+              name="name"
+              placeholder="Enter customer name"
+            />
+            <Input
+              type="text"
+              value={customer.address}
+              onChange={handleChange}
+              name="address"
+              placeholder="Enter customer address"
+            />
+            <ButtonLabel
+              label="Save"
+              onClick={handleSaveClick}
+              type="button"
+              loader={loading}
+              disabled={false}
+              style={{
+                backgroundColor: "#F9C300",
+                height: "30px",
+                width: "40%",
+                color: "#000",
+                borderBottomLeftRadius: "20px",
+                marginTop:"10px"
+              }}
+            />
+            <ButtonLabel
+              label="Close"
+              onClick={handleCloseUserPopup}
+              type="button"
+              disabled={false}
+              style={{
+                backgroundColor: "#f56868",
+                height: "30px",
+                width: "40%",
+                color: "#000",
+                borderBottomRightRadius: "20px",
+                marginLeft: "10px",
+                marginTop:"10px"
+              }}
+            />
+          </div>
+        )}
         {SummaryList &&
           SummaryList.map((list) => {
             return (
