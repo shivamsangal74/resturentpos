@@ -12,6 +12,7 @@ import pizza from "../../assets/images/pizza.png";
 import { HorizontalLine } from "../HorizontalLine/HorizontalLine";
 import { ButtonLabel } from "../Button/Button";
 import { Input } from "../Input/Input";
+import { useSelector } from 'react-redux';
 
 export const RightSideBar = () => {
   const handleSaveClick = () => {
@@ -23,36 +24,37 @@ export const RightSideBar = () => {
   const handleOrderClick = () => {};
   const [loading, setLoading] = useState(false);
   const [isUserPopupOpen, setIsUserPopupOpen] = useState(false);
-  const SummaryList = [
-    {
-      id: 1,
-      image: burger,
-      title: "Burger",
-      Qty: 2,
-      Mrp: 50,
-    },
-    {
-      id: 2,
-      image: pizza,
-      title: "Pizza",
-      Qty: 1,
-      Mrp: 150,
-    },
-    {
-      id: 3,
-      image: coffee,
-      title: "Coffee",
-      Qty: 1,
-      Mrp: 80,
-    },
-    {
-      id: 4,
-      image: burger,
-      title: "Burger",
-      Qty: 2,
-      Mrp: 50,
-    },
-  ];
+  const SummaryList = useSelector((state) => state.cart.items);
+  // const SummaryList = [
+  //   {
+  //     id: 1,
+  //     image: burger,
+  //     title: "Burger",
+  //     Qty: 2,
+  //     Mrp: 50,
+  //   },
+  //   {
+  //     id: 2,
+  //     image: pizza,
+  //     title: "Pizza",
+  //     Qty: 1,
+  //     Mrp: 150,
+  //   },
+  //   {
+  //     id: 3,
+  //     image: coffee,
+  //     title: "Coffee",
+  //     Qty: 1,
+  //     Mrp: 80,
+  //   },
+  //   {
+  //     id: 4,
+  //     image: burger,
+  //     title: "Burger",
+  //     Qty: 2,
+  //     Mrp: 50,
+  //   },
+  // ];
   const handleOpenUserPopup = () => {
     if(isUserPopupOpen){
       setIsUserPopupOpen(false);
@@ -94,7 +96,7 @@ export const RightSideBar = () => {
           <DeleteFilled className="deteleIcon" />
         </div>
       </div>
-      <div>
+      <div className="summaryList">
         {isUserPopupOpen && (
           <div className="customerPopupContainer">
             <Input
@@ -155,10 +157,10 @@ export const RightSideBar = () => {
             return (
               <SummaryCard
                 key={list.id}
-                title={list.title}
-                Mrp={list.Mrp}
-                Qty={list.Qty}
-                image={list.image}
+                title={list.name}
+                Mrp={list.price}
+                Qty={list.quantity}
+                image={list.img}
               />
             );
           })}
