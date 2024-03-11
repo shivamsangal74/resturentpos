@@ -1,6 +1,6 @@
 [
     {
-      "id": "2-lou-malnatis-deep-dish-pizzas",
+      "id": "1",
       "img": "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/97981/2-lou-malnatis-deep-dish-pizzas.bf0fe065d251a9cca3925b269d443a27.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
       "name": "Lou Malnati's Pizza",
       "dsc": "2 Lou Malnati's Deep Dish Pizzas",
@@ -9,7 +9,7 @@
       "country": "Chicago, IL"
     },
     {
-      "id": "23699-choose-your-own-thin-crust-pizza-4-pack",
+      "id": "2",
       "img": "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/89781/choose-your-own-thin-crust-pizza-4-pack.b928a2008eab50c65dc87e59b5952190.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
       "name": "Bartolini’s",
       "dsc": "Choose Your Own Thin Crust Pizza - 4 Pack",
@@ -18,7 +18,7 @@
       "country": "Chicago, IL"
     },
     {
-      "id": "choose-your-own-new-haven-style-pizza-6-pack",
+      "id": "3",
       "img": "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/131840/choose-your-own-new-haven-style-pizza-6-pack.ab82828afc6172cdd4017556c15e36dd.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
       "name": "Zuppardi's Apizza",
       "dsc": "New Haven-Style Pizza - 6 Pack (Choose Your Own)",
@@ -27,7 +27,7 @@
       "country": "West Haven, CT"
     },
     {
-      "id": "6-lou-malnatis-deep-dish-pizzas",
+      "id": "4",
       "img": "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/106829/6-lou-malnatis-deep-dish-pizzas.f59993181da5d295668c8a6fb856055e.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
       "name": "Lou Malnati's Pizza",
       "dsc": "6 Lou Malnati's Deep Dish Pizzas",
