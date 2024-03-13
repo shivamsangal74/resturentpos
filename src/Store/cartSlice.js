@@ -10,12 +10,15 @@ const cartSlice = createSlice({
 
     reducers: {
         additem: (state,action) => {
-            const item = action.payload;
-            const itemIndex = state.items.findIndex(item=> item.id == itemID);
-            if(itemIndex) {
-                state.items[isAlreadyAdded].quantity = state.items[isAlreadyAdded].quantity++
+            const newItem = action.payload;
+            const itemIndex = state.items.findIndex(item=> item.id == newItem.id);
+            if (itemIndex !== -1) {
+                state.items[itemIndex].quantity++
+            }
+            else{
+                newItem.quantity = 1;
+                state.items.push(newItem);
             } 
-            state.items = state.items.push(action.payload)
         },
         removeItems: (state,action) => {
             const {itemId} = action.payload;
